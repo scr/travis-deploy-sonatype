@@ -48,7 +48,7 @@ See http://docs.travis-ci.com/user/encrypting-files/
 
 ```
 cd .. # Back to your project root - out of the travis subfolder
-git submodule add git@github.com:scr/travis-deploy-sonatype.git
+git submodule add https://github.com/scr/travis-deploy-sonatype.git
 ```
 
 ### Update your travis with the following settings:
