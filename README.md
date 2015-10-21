@@ -44,9 +44,17 @@ See http://docs.travis-ci.com/user/encrypting-files/
 
 ```
 
+### Make a submodule to pull in the deployment script
+
+```
+cd .. # Back to your project root - out of the travis subfolder
+git submodule add git@github.com:scr/travis-deploy-sonatype.git
+```
+
 ### Update your travis with the following settings:
+
 ```
 after_success:
-- bash scripts/deploy.sh the-ENC_HASH-from-above travis/somename-from-above.asc travis/settings.xml
+- bash travis-deploy-sonatype/scripts/deploy.sh the-ENC_HASH-from-above travis/somename-from-above.asc travis/settings.xml
 sudo: true
 ```
