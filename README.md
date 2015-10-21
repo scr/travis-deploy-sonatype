@@ -55,6 +55,6 @@ git submodule add https://github.com/scr/travis-deploy-sonatype.git
 
 ```
 after_success:
-- bash travis-deploy-sonatype/scripts/deploy.sh the-ENC_HASH-from-above travis/somename-from-above.asc travis/settings.xml
+- bash travis-deploy-sonatype/scripts/deploy.sh the-ENC_HASH-from-above travis/somename-from-above.asc.enc travis/settings.xml
 sudo: true
 ```
